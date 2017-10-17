@@ -1,3 +1,3 @@
-import { AttachThese } from './middleware.js'
+import Middleware from './middleware.js'
 
-export const Middleware = AttachThese;
+export default Middleware;

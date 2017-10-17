@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "webpack --config webpack.config.js ; node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "backend": "babel-node ./src/server/server.js",
+    "backend": "babel-node ./src/server/clusters.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,7 +30,6 @@
     "babel-preset-es2015-node5": "^1.2.0",
     "babel-preset-stage-3": "^6.24.1",
     "babel-register": "^6.26.0",
-    "body-parser": "^1.18.2",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "jquery": "^3.1.1",
@@ -44,9 +43,12 @@
     "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
     "mongoose": "^4.12.2",
+    "morgan": "^1.9.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",

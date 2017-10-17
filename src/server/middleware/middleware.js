@@ -1,13 +1,15 @@
 import parser from 'body-parser';
+import compression from 'compression';
+import morgan from 'morgan';
 
-class AttachMiddleware {
+class Middleware {
     constructor() {
         this.attach = (app) => {
-            console.log('attaching middleware');
             app.use(parser);
+            app.use(morgan);
+            app.use(compression);   
         }
     }
 }
 
-export const
-    AttachThese = new AttachMiddleware();
+export default new Middleware();
